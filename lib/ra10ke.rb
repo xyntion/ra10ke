@@ -21,15 +21,17 @@ module Ra10ke
     include Ra10ke::Install
     include Ra10ke::Validate
 
-    attr_accessor :basedir, :moduledir, :puppetfile_path, :puppetfile_name, :force, :purge
+    attr_accessor :basedir, :moduledir, :puppetfile_path, :puppetfile_name, :reference_puppetfile_path, :reference_puppetfile_name, :force, :purge
 
     def initialize(*args)
-      @basedir         = Dir.pwd
-      @moduledir       = nil
-      @puppetfile_path = nil
-      @puppetfile_name = nil
-      @force           = nil
-      @purge           = false
+      @basedir                   = Dir.pwd
+      @moduledir                 = nil
+      @puppetfile_path           = nil
+      @puppetfile_name           = nil
+      @reference_puppetfile_path = nil
+      @reference_puppetfile_name = nil
+      @force                     = nil
+      @purge                     = false
 
       yield(self) if block_given?
 
