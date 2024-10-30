@@ -84,6 +84,7 @@ module Ra10ke
           results[a.first.to_sym] = a.last
         end
       end
+      pp results
       results
     end
   end
