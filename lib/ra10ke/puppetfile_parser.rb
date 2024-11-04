@@ -35,7 +35,7 @@ module Ra10ke
           next nil if line.empty?
 
           parse_module_args(line)
-        end.compact.uniq
+        pp end.compact.uniq
       end
     end
 
@@ -84,7 +84,6 @@ module Ra10ke
           results[a.first.to_sym] = a.last
         end
       end
-      pp results
       results
     end
   end
